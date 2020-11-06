@@ -217,14 +217,17 @@ console.log(artists[2].bio);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-function changeName(array, x){
-    if(array[x].name === "Vincent Van Dough"){
-      array[x].name === "Vincent Van Gogh";
+function changeName(array, personName, newName){
+
+  for(let i in array){
+      if(array[i].name.includes(personName)){
+        array[i].name = newName;
+       }
     }
-  return array;
+    return array;
 }
 
-// console.log(changeName(artists, 8));
+console.log('TASK 2', changeName(artists, "Vincent van Dough", "Vincent Van Gogh"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
